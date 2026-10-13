@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#888a91">
+  <title>Renewly | Subscription Manager</title>
+</head>
+<body>
+  <header class="window-titlebar" aria-label="Window controls">
+    <div class="window-titlebar-brand"><span class="window-titlebar-mark" aria-hidden="true">R</span><span>Renewly | Subscription Manager</span></div>
+    <div class="window-titlebar-controls">
+      <button type="button" data-window-action="minimize" aria-label="Minimize window" title="Minimize"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 9h8" /></svg></button>
+      <button type="button" data-window-action="toggle-maximize" aria-label="Maximize or restore window" title="Maximize or restore"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" /></svg></button>
+      <button class="window-close" type="button" data-window-action="close" aria-label="Close window" title="Close"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="m3 3 6 6m0-6-6 6" /></svg></button>
+    </div>
+  </header>
+  <main class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark" aria-hidden="true">R</div>
+        <div class="brand-text">
+          <span class="brand-name">Renewly</span>
+          <span class="brand-subtitle">Plan Manager</span>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-controls="sidebarNav" aria-expanded="true" title="Collapse sidebar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="Main navigation">
+        <button class="nav-item nav-glass" data-page="add-plan" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--add" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span><span class="nav-label">Add Plan</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass active" data-page="dashboard" type="button" aria-current="page"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--home" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg></span><span class="nav-label">Home Page</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="analytics" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--analytics" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 4 6-7"/></svg></span><span class="nav-label">Analytics</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="assistant" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--assistant" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2L12 3Z"/><path d="m19 14 .8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14Z"/></svg></span><span class="nav-label">Smart Assistant</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="purchases" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--purchases" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M5 3h14v18l-4-2-3 2-3-2-4 2V3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><span class="nav-label">Purchases</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="calendar" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--calendar" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg></span><span class="nav-label">Calendar</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="recycle-bin" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--recycle" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg></span><span class="nav-label">Recycle Bin</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="settings" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--settings" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M4 21v-7m0-4V3m8 18v-9m0-4V3m8 18v-5m0-4V3"/><path d="M2 14h4m4-6h4m4 8h4"/></svg></span><span class="nav-label">Settings</span><span class="nav-glass-rim"></span></button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-bottom">
+        <button class="nav-item nav-glass" data-page="account" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--account" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="nav-label">Account</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="reset-password" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--security" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="nav-label">Reset Password</span><span class="nav-glass-rim"></span></button>
+        <button class="nav-item nav-glass" data-page="logout" type="button"><span class="nav-glass-highlight"></span><span class="nav-icon nav-icon--logout" aria-hidden="true"><svg class="menu-icon" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"/></svg></span><span class="nav-label">Logout Account</span><span class="nav-glass-rim"></span></button>
+      </div>
+    </aside>
+
+    <section class="content-area">
+      <header class="topbar">
+        <div>
+          <div class="topbar-copy"><span class="page-kicker" id="pageEyebrow">Good to see you</span><h1 id="pageTitle">Renewly Home Page</h1><p id="pageSubtitle">Track every plan, renewal and reminder in one place.</p></div>
+        </div>
+        <div class="topbar-actions">
+          <span class="theme-caption" id="themeCaption">Light mode</span>
+          <label class="switch" title="Toggle light and dark mode">
+            <input class="switch__input" id="themeToggle" type="checkbox" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+            <span class="switch__icon" aria-hidden="true">
+              <span class="switch__icon-part switch__icon-part--1"></span>
+              <span class="switch__icon-part switch__icon-part--2"></span>
+              <span class="switch__icon-part switch__icon-part--3"></span>
+              <span class="switch__icon-part switch__icon-part--4"></span>
+              <span class="switch__icon-part switch__icon-part--5"></span>
+              <span class="switch__icon-part switch__icon-part--6"></span>
+              <span class="switch__icon-part switch__icon-part--7"></span>
+              <span class="switch__icon-part switch__icon-part--8"></span>
+              <span class="switch__icon-part switch__icon-part--9"></span>
+              <span class="switch__icon-part switch__icon-part--10"></span>
+              <span class="switch__icon-part switch__icon-part--11"></span>
+            </span>
+            <span class="switch__sr">Toggle dark mode</span>
+          </label>
+          <section class="clock clock--no-seconds" id="renewlyClock" role="timer" aria-label="Current time">
+            <div class="clock__unit">
+              <div class="clock__block" id="clockHours" aria-hidden="true"><div class="clock__digit-group"><span class="clock__digits">00</span><span class="clock__digits">00</span></div></div>
+              <span class="clock__label">HOURS</span>
+            </div>
+            <span class="clock__colon" aria-hidden="true"></span>
+            <div class="clock__unit">
+              <div class="clock__block" id="clockMinutes" aria-hidden="true"><div class="clock__digit-group"><span class="clock__digits">00</span><span class="clock__digits">00</span></div></div>
+              <span class="clock__label">MINUTES</span>
+            </div>
+            <span class="clock__colon clock__colon--seconds" aria-hidden="true"></span>
+            <div class="clock__unit clock__unit--seconds">
+              <div class="clock__block" id="clockSeconds" aria-hidden="true"><div class="clock__digit-group"><span class="clock__digits">00</span><span class="clock__digits">00</span></div></div>
+              <span class="clock__label">SECONDS</span>
+            </div>
+            <span class="clock__period" id="clockPeriod" hidden></span>
+          </section>
+        </div>
+      </header>
+
+      <section class="content-panel" aria-live="off">
+        <section class="page-view dashboard-page" id="dashboardPage" aria-labelledby="dashboardHeading">
+          <header class="section-heading">
+            <div><span class="section-kicker">YOUR SUBSCRIPTIONS</span><h2 id="dashboardHeading">Overview</h2></div>
+            <button class="primary-button" type="button" data-go-page="add-plan">＋ Add plan</button>
+          </header>
+          <div class="summary-grid">
+            <article class="summary-card"><span class="summary-label">ACTIVE PLANS</span><strong id="activePlanCount">0</strong></article>
+            <article class="summary-card summary-card--spend"><span class="summary-label">MONTHLY SPEND</span><div id="monthlySpend" class="summary-total">—</div></article>
+            <article class="summary-card"><span class="summary-label">NEXT RENEWAL</span><strong id="nextRenewalSummary">—</strong><span id="nextRenewalName" class="summary-detail">No plans yet</span></article>
+          </div>
+          <div class="dashboard-columns">
+            <section class="data-card plan-card" aria-labelledby="plansHeading">
+              <div class="card-heading"><div><span class="section-kicker">ALL SUBSCRIPTIONS</span><h3 id="plansHeading">Your plans</h3></div><button class="text-button" type="button" data-go-page="search">Search plans</button></div>
+              <div id="dashboardEmpty" class="empty-state" hidden><p>Your subscription list is empty.</p><button class="text-button" type="button" data-go-page="add-plan">Add your first plan</button></div>
+              <div class="table-wrap" id="planTableWrap"><table class="plan-table"><thead><tr><th>Plan</th><th>Price</th><th>Next renewal</th><th>Actions</th></tr></thead><tbody id="planTableBody"></tbody></table></div>
+            </section>
+            <section class="data-card renewal-card" aria-labelledby="renewalsHeading">
+              <div class="card-heading"><div><span class="section-kicker">COMING UP</span><h3 id="renewalsHeading">Renewals</h3></div></div>
+              <ul class="renewal-list" id="upcomingList"></ul>
+              <p id="upcomingEmpty" class="muted-copy" hidden>No upcoming renewals.</p>
+            </section>
+          </div>
+          <div class="box start-btn dashboard-empty-cta" id="glassBar" style="--w:min(520px,100%);--h:75px;--tr:15%;">
+            <span class="text">Get started</span>
+            <button class="btn-icon" id="glassAction" type="button" aria-label="Add your first plan"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.172 12 8.222 7.05l1.414-1.414L16 12l-6.364 6.364-1.414-1.414z" /></svg></button>
+            <div class="circle-overlay" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="page-view form-page" id="addPlanPage" aria-labelledby="addPlanHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">SUBSCRIPTION DETAILS</span><h2 id="addPlanHeading">Add a plan</h2></div></header>
+          <form id="addPlanForm" class="data-card plan-form">
+            <label>Plan name<input id="planName" name="name" type="text" maxlength="80" placeholder="e.g. Music streaming" required></label>
+            <div class="form-row">
+              <label>Price<input id="planAmount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required></label>
+              <label>Billing cycle<select id="planFrequency" name="billing_cycle"><option>Monthly</option><option>Quarterly</option><option>Half-Yearly</option><option>Yearly</option><option>Custom</option><option>Weekly</option></select></label>
+            </div>
+            <div class="form-row">
+              <label>Currency<select id="planCurrency" name="currency"></select></label>
+              <label>Next renewal<input id="planRenewal" name="renewalDate" type="date" required></label>
+            </div>
+            <div class="form-row">
+              <label>Category<select id="planCategory" name="category"><option>📺 Entertainment</option><option>☁️ Software / Cloud</option><option>🏠 Home</option><option>📱 Mobile</option><option>💳 Finance</option><option>🎓 Education</option><option>📦 Other</option></select></label>
+              <label>Reminder (days before)<input id="planReminderDays" name="reminder_days" type="number" min="0" max="3650" value="3"></label>
+            </div>
+            <div class="form-row">
+              <label>Payment method<input id="planPaymentMethod" name="payment_method" list="paymentMethodOptions" maxlength="80" placeholder="Optional"></label>
+              <datalist id="paymentMethodOptions"><option value="Credit Card"><option value="Debit Card"><option value="UPI"><option value="Bank Transfer"><option value="Cash"><option value="Other"></datalist>
+              <label>Payment status<select id="planPaymentStatus" name="payment_status"><option value="PENDING PAYMENT">Pending payment</option><option value="PAID">Paid</option></select></label>
+            </div>
+            <div class="form-row">
+              <label>Website<input id="planWebsite" name="website" type="url" placeholder="https://example.com"></label>
+              <label>Account / email<input id="planAccountEmail" name="account_email" type="text" maxlength="160" placeholder="Optional account/email"></label>
+            </div>
+            <div class="form-row">
+              <label>Plan icon<select id="planIconEmoji" name="icon_emoji"><option>📦</option><option>📺</option><option>🎬</option><option>🎵</option><option>☁️</option><option>💻</option><option>🎮</option><option>🏋️</option><option>📚</option><option>🛒</option><option>💳</option><option>🧠</option><option>🚗</option><option>🏠</option><option>❤️</option><option>⭐</option></select></label>
+              <label>Last payment date<input id="planLastPaymentDate" name="last_payment_date" type="date"></label>
+            </div>
+            <label class="toggle-row" for="planAutoRenew"><span><strong>Automatically renew</strong><small>Mark this plan as set to renew automatically.</small></span><input id="planAutoRenew" name="auto_renew" type="checkbox"></label>
+            <label>Notes <span class="optional-label">(optional)</span><textarea id="planNotes" name="notes" maxlength="240" rows="3" placeholder="Anything you want to remember"></textarea></label>
+            <div class="form-actions"><button class="primary-button" id="savePlanButton" type="submit">Save plan</button><button class="secondary-button" id="cancelPlanEdit" type="button">Cancel</button></div>
+            <p class="form-status" id="addPlanStatus" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="page-view search-page" id="searchPage" aria-labelledby="searchHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">FIND A SUBSCRIPTION</span><h2 id="searchHeading">Search plans</h2></div></header>
+          <label class="search-field"><span class="visually-hidden">Search your plans</span><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search by plan name or notes"></label>
+          <section class="data-card search-results-card"><div class="card-heading"><h3>Results</h3><span id="searchResultCount" class="muted-copy"></span></div><ul class="search-results" id="searchResults"></ul><p id="searchEmpty" class="muted-copy" hidden>No matching plans.</p></section>
+        </section>
+
+        <section class="page-view feature-page" id="analyticsPage" aria-labelledby="analyticsHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">YOUR SUBSCRIPTION HEALTH</span><h2 id="analyticsHeading">Analytics</h2></div></header>
+          <div class="summary-grid"><article class="summary-card"><span class="summary-label">SAVED PLANS</span><strong id="analyticsPlanCount">0</strong></article><article class="summary-card"><span class="summary-label">MONTHLY SPEND</span><strong id="analyticsMonthlySpend">—</strong></article><article class="summary-card"><span class="summary-label">NEXT RENEWAL</span><strong id="analyticsNextRenewal">—</strong><span id="analyticsNextName" class="summary-detail">No plans yet</span></article></div>
+          <section class="data-card feature-note"><h3>Spending overview</h3><p>Your totals are calculated from the subscription plans saved on this device.</p><button class="secondary-button" type="button" data-go-page="dashboard">View home page</button></section>
+        </section>
+
+        <section class="page-view feature-page" id="assistantPage" aria-labelledby="assistantHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">RENEWLY TOOLS</span><h2 id="assistantHeading">Smart Assistant</h2></div></header>
+          <section class="data-card feature-note"><span class="feature-symbol" aria-hidden="true">✣</span><h3>Subscription insights</h3><p>The assistant area is ready for the next frontend step. Suggestions can be added here once the app’s data and assistant service are connected.</p><button class="secondary-button" type="button" data-go-page="dashboard">Review my plans</button></section>
+        </section>
+
+        <section class="page-view feature-page" id="purchasesPage" aria-labelledby="purchasesHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">YOUR SUBSCRIPTIONS</span><h2 id="purchasesHeading">Purchases</h2></div><button class="primary-button" type="button" data-go-page="add-plan">＋ Add plan</button></header>
+          <section class="data-card"><div class="card-heading"><h3>Tracked plans</h3><span id="purchaseCount" class="muted-copy">0 plans</span></div><div id="purchaseList" class="feature-list"></div></section>
+        </section>
+
+        <section class="page-view feature-page" id="calendarPage" aria-labelledby="calendarHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">UPCOMING DATES</span><h2 id="calendarHeading">Calendar</h2></div></header>
+          <section class="data-card"><div class="card-heading"><h3>Renewal dates</h3><span class="muted-copy">Soonest first</span></div><div id="calendarList" class="feature-list"></div></section>
+        </section>
+
+        <section class="page-view feature-page" id="timelinePage" aria-labelledby="timelineHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">PLAN SCHEDULE</span><h2 id="timelineHeading">Renewal Timeline</h2></div></header>
+          <section class="data-card"><div class="card-heading"><h3>Renewals ahead</h3></div><div id="timelineList" class="feature-list feature-list--timeline"></div></section>
+        </section>
+
+        <section class="page-view feature-page" id="recycleBinPage" aria-labelledby="recycleBinHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">RECENTLY REMOVED</span><h2 id="recycleBinHeading">Recycle Bin</h2></div></header>
+          <section class="data-card"><div class="card-heading"><div><span class="section-kicker">RECENTLY REMOVED</span><h3>Deleted plans</h3></div><span class="muted-copy" id="recycleCount">0 items</span></div><div class="feature-list" id="recycleList"></div><p class="muted-copy" id="recycleEmpty">The recycle bin is empty.</p></section>
+        </section>
+
+        <section class="page-view delete-page" id="deletePage" aria-labelledby="deleteHeading" hidden>
+          <div class="delete-card data-card">
+            <span class="section-kicker">PLAN MANAGEMENT</span>
+            <h2 id="deleteHeading">Delete a plan</h2>
+            <p>Choose a saved plan. You’ll confirm before it is removed.</p>
+            <label class="delete-select-label" for="deletePlanSelect">Plan to delete</label>
+            <select id="deletePlanSelect"><option value="">No plans available</option></select>
+            <button class="del-btn" id="deleteButton" type="button" data-running="false" aria-label="Delete selected plan" disabled>
+              <svg class="del-btn__icon" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+                <clipPath id="can-clip">
+                  <rect class="del-btn__icon-can-fill" x="5" y="24" width="14" height="11" />
+                </clipPath>
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(12,12)">
+                  <g class="del-btn__icon-lid">
+                    <polyline points="9,5 9,1 15,1 15,5" />
+                    <polyline points="4,5 20,5" />
+                  </g>
+                  <g class="del-btn__icon-can">
+                    <g stroke-width="0">
+                      <polyline id="can-fill" points="6,10 7,23 17,23 18,10" />
+                      <use clip-path="url(#can-clip)" href="#can-fill" fill="currentColor" />
+                    </g>
+                    <polyline points="6,10 7,23 17,23 18,10" />
+                  </g>
+                </g>
+              </svg>
+              <span class="del-btn__letters" aria-hidden="true"><span class="del-btn__letter-box"><span class="del-btn__letter">D</span></span><span class="del-btn__letter-box"><span class="del-btn__letter">e</span></span><span class="del-btn__letter-box"><span class="del-btn__letter">l</span></span><span class="del-btn__letter-box"><span class="del-btn__letter">e</span></span><span class="del-btn__letter-box"><span class="del-btn__letter">t</span></span><span class="del-btn__letter-box"><span class="del-btn__letter">e</span></span></span>
+            </button>
+            <p class="delete-status" id="deleteStatus" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="page-view settings-page" id="settingsPage" aria-labelledby="settingsHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">PERSONALIZE RENEWLY</span><h2 id="settingsHeading">Settings</h2></div></header>
+          <div class="settings-groups">
+            <section class="data-card settings-card"><div class="card-heading"><div><span class="section-kicker">PREFERENCES</span><h3>General</h3></div></div>
+              <label for="currencySetting">Default currency <span class="setting-help">Used for new plans; existing plans keep their currency.</span></label><select id="currencySetting"></select>
+              <label for="dateFormat">Date format</label><select id="dateFormat"><option value="DD-MM-YYYY">DD-MM-YYYY</option><option value="DD/MM/YYYY">DD/MM/YYYY</option><option value="MM/DD/YYYY">MM/DD/YYYY</option><option value="YYYY-MM-DD">YYYY-MM-DD</option></select>
+              <label for="defaultReminderDays">Default reminder <span class="setting-help">Days before each renewal; applies to new plans.</span></label><input id="defaultReminderDays" type="number" min="0" max="3650">
+              <label for="clockFormat">Clock format</label><select id="clockFormat"><option value="24">24-hour</option><option value="12">12-hour</option></select>
+              <label class="toggle-row" for="showSeconds"><span><strong>Show seconds</strong><small>Add seconds to the compact clock.</small></span><input id="showSeconds" type="checkbox"></label>
+              <label class="toggle-row" for="notificationsEnabled"><span><strong>Renewal notifications</strong><small>Enable local renewal reminders when supported.</small></span><input id="notificationsEnabled" type="checkbox"></label>
+              <label class="toggle-row" for="notificationSound"><span><strong>Notification sound</strong><small>Preference for reminder alerts.</small></span><input id="notificationSound" type="checkbox"></label>
+            </section>
+            <section class="data-card settings-card"><div class="card-heading"><div><span class="section-kicker">HOME PAGE</span><h3>Layout</h3></div></div>
+              <label for="defaultPage">Opening page</label><select id="defaultPage"><option value="dashboard">Home Page</option><option value="analytics">Analytics</option></select>
+              <label for="dashboardDensity">Dashboard density</label><select id="dashboardDensity"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select>
+              <label class="toggle-row" for="showSummary"><span><strong>Show summary cards</strong><small>Display the home page overview metrics.</small></span><input id="showSummary" type="checkbox"></label>
+              <label class="toggle-row" for="showActivePlans"><span><strong>Active plans</strong><small>Show the active plans metric.</small></span><input id="showActivePlans" type="checkbox"></label>
+              <label class="toggle-row" for="showMonthlySpend"><span><strong>Monthly spend</strong><small>Show the monthly spend metric.</small></span><input id="showMonthlySpend" type="checkbox"></label>
+              <label class="toggle-row" for="showNextRenewal"><span><strong>Next renewal</strong><small>Show the next renewal metric.</small></span><input id="showNextRenewal" type="checkbox"></label>
+            </section>
+            <section class="data-card settings-card"><div class="card-heading"><div><span class="section-kicker">LOCAL DATA</span><h3>Backup and export</h3></div></div>
+              <p class="setting-help">Your plans, recycle bin, preferences, and local profile stay on this device. Export a backup or restore one here.</p>
+              <div class="settings-actions"><button class="secondary-button" type="button" id="exportBackup">Export JSON backup</button><button class="secondary-button" type="button" id="exportPlansCsv">Export plans CSV</button><button class="secondary-button" type="button" id="importBackup">Restore JSON backup</button><input id="backupFile" type="file" accept="application/json,.json" hidden></div>
+            </section>
+            <section class="data-card settings-card"><div class="card-heading"><div><span class="section-kicker">CONNECTED SERVICES</span><h3>Online features</h3></div></div>
+              <p class="setting-help">Cloud sync, push notifications, Telegram, and account sign-in need the Python app’s services/API bridge. They are currently disconnected; this frontend does not send data online.</p>
+            </section>
+            <p class="settings-saved" id="settingsSaved" role="status" aria-live="polite">Settings save automatically.</p>
+          </div>
+        </section>
+
+        <section class="page-view account-page" id="accountPage" aria-labelledby="accountHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">YOUR DATA</span><h2 id="accountHeading">Account</h2></div></header>
+          <div class="account-groups">
+            <section class="data-card account-card"><div class="account-profile-row"><button class="account-avatar" id="accountAvatarButton" type="button" aria-label="Choose profile picture"><img id="accountAvatarImage" alt="" hidden><span id="accountAvatarInitial">L</span></button><div class="account-profile-copy"><span class="section-kicker">LOCAL PROFILE</span><h3 id="accountDisplayName">Local user</h3><p id="accountUpdatedLabel">Profile stored on this device</p></div><input id="accountAvatarFile" type="file" accept="image/png,image/jpeg,image/webp" hidden></div>
+              <label class="account-field" for="accountNameInput">Display name<input id="accountNameInput" type="text" maxlength="80" autocomplete="nickname"></label>
+              <div class="account-actions"><button class="primary-button" type="button" id="saveAccountProfile">Save profile</button><button class="secondary-button" type="button" id="chooseAccountAvatar">Change picture</button><button class="secondary-button" type="button" data-go-page="reset-password">Password and security</button></div><p class="settings-saved" id="accountStatus" role="status" aria-live="polite"></p>
+            </section>
+            <section class="data-card account-card"><div class="card-heading"><div><span class="section-kicker">ACCOUNT INFORMATION</span><h3>Profile details</h3></div></div>
+              <dl class="account-details"><div><dt>Account role</dt><dd id="accountRole">Local profile</dd></div><div><dt>App version</dt><dd>Renewly frontend</dd></div><div><dt>Cloud account</dt><dd>Not connected</dd></div><div><dt>Local data</dt><dd>This device</dd></div></dl>
+            </section>
+            <section class="data-card account-card account-stats-card"><div class="card-heading"><div><span class="section-kicker">ACCOUNT STATISTICS</span><h3>Your Renewly overview</h3></div></div>
+              <div class="account-stats-grid"><article><span>Total plans</span><strong id="accountStatTotal">0</strong></article><article><span>Active</span><strong id="accountStatActive">0</strong></article><article><span>Due in 7 days</span><strong id="accountStatDue">0</strong></article><article><span>Paid</span><strong id="accountStatPaid">0</strong></article><article><span>Total plan value</span><strong id="accountStatValue">—</strong></article><article><span>Data items</span><strong id="accountStatItems">0</strong></article></div>
+            </section>
+            <section class="data-card account-card"><div class="card-heading"><div><span class="section-kicker">BACKUP & RESTORE</span><h3>Account data</h3></div></div><p>Your backup includes plans, recycle bin, settings, and this local profile. No password or cloud credentials are included.</p><div class="account-actions"><button class="secondary-button" type="button" id="accountExportBackup">Create full backup</button><button class="secondary-button" type="button" id="accountImportBackup">Restore backup</button></div></section>
+            <section class="data-card account-card"><div class="card-heading"><div><span class="section-kicker">APP PREFERENCES</span><h3>Personalize Renewly</h3></div></div><p>Manage reminders, currency, date format, theme, and homepage layout in Settings.</p><button class="secondary-button" type="button" data-go-page="settings">Open settings</button></section>
+            <section class="data-card account-card"><div class="card-heading"><div><span class="section-kicker">ACCOUNT SESSION</span><h3>Sign-in and logout</h3></div></div><p>This frontend uses a local profile and has no authenticated session. Sign-in, cloud disconnect, and secure logout become available after connecting the account service.</p><button class="secondary-button" type="button" disabled>Sign out unavailable</button></section>
+          </div>
+        </section>
+
+        <section class="page-view feature-page" id="resetPasswordPage" aria-labelledby="resetPasswordHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">ACCOUNT SECURITY</span><h2 id="resetPasswordHeading">Reset Password</h2></div></header>
+          <section class="data-card feature-note"><span class="feature-symbol" aria-hidden="true">⛨</span><h3>No online account connected</h3><p>This frontend stores plans locally and has no password to reset. Account security can be enabled when an authentication service is connected.</p><button class="secondary-button" type="button" data-go-page="account">View account</button></section>
+        </section>
+
+        <section class="page-view feature-page" id="logoutPage" aria-labelledby="logoutHeading" hidden>
+          <header class="section-heading"><div><span class="section-kicker">ACCOUNT</span><h2 id="logoutHeading">Logout Account</h2></div></header>
+          <section class="data-card feature-note"><span class="feature-symbol" aria-hidden="true">⇥</span><h3>You’re using a local profile</h3><p>There is no signed-in account in this frontend to log out of. Your saved plans remain on this device.</p><button class="secondary-button" type="button" data-go-page="dashboard">Back to home</button></section>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="confirm-dialog" id="deleteConfirmDialog" aria-labelledby="confirmDeleteHeading">
+    <div class="dialog-content"><span class="section-kicker">PLEASE CONFIRM</span><h2 id="confirmDeleteHeading">Delete this plan?</h2><p id="confirmDeleteCopy"></p><div class="form-actions"><button class="danger-button" id="confirmDeleteButton" type="button">Delete plan</button><button class="secondary-button" id="cancelDeleteButton" type="button">Keep plan</button></div></div>
+  </dialog>
+
+  <div class="toast" id="undoToast" role="status" aria-live="polite" hidden><span id="undoMessage"></span><button id="undoDeleteButton" type="button">Undo</button></div>
+</body>
+</html>
