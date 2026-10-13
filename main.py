@@ -1,4 +1,4 @@
-import sys
+﻿import sys
 import os
 import base64
 import ctypes
@@ -133,7 +133,7 @@ APP_TAGLINE = "Stay Ahead of Every Renewal"
 # APPLICATION VERSION & ONLINE UPDATE SYSTEM
 # ---------------------------------------------------------
 # IMPORTANT: Change this value every time you build a new Renewly EXE.
-APP_VERSION = "1.0.22"
+APP_VERSION = "1.0.23"
 
 GITHUB_REPOSITORY = "satvikhospitalvn-svg/Renewly"
 UPDATE_RELEASES_URL = f"https://github.com/{GITHUB_REPOSITORY}/releases/latest"
